@@ -14,7 +14,7 @@ zip: "30309"
 function printContact(personalInfo){
     console.log(personalInfo.name);
     console.log(personalInfo.address);
-    console.log(`${personalInfo.city}, ${personalInfo.state} ${personalInfo.zip}`)
+    console.log(`${personalInfo.City}, ${personalInfo.state} ${personalInfo.zip}`)
 
 
 }
