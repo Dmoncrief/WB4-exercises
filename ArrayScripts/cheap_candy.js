@@ -11,5 +11,15 @@ let products = [
 
 
    // Which candies costs less than $4.00?
+let cheapCandies = products.filter(product => product.price < 4.00);
+console.log("candies that cost less than $4.00",cheapCandies);
+
+
 // Which candies has "M&M" its name?
+let mAndMCandies = products.filter(product => product.product.includes("M&M"));
+console.log("Candies that have 'M&M' in their name:",mAndMCandies);
+
 // Do we carry "Swedish Fish"?
+
+let hasSwedishFish = products.some(product => product.product === "Swedish Fish");
+console.log("Do we carry Swedish Fish?", hasSwedishFish ? "Yes" : "No");
