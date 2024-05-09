@@ -48,21 +48,34 @@ let courses = [ {
 
 
 // When does the PROG200 course start?
-let prog200StartDate = courses.find(course => course.CourseId === "PROG200").StartDate;
-console.log("PROG200 course starts on:", prog200StartDate);
+let PROJ200Course;
+for (let i = 0; i < courses.length ; i++) {
+    if(courses[i].CourseId == "PROG200"){
+        PROJ200Course = courses[i];
+
+ console.log(PROJ200Course.StartDate);
+} 
+}
 
 // What is the title of the PROJ500 course?
-let proj500Title = courses.find(course => course.CourseId === "PROJ500").Title;
-console.log("Title of PROJ500 course:", proj500Title);
+let PROJ500Course;
+for (let i = 0; i < courses.length ; i++) {
+    if(courses[i].CourseId == "PROG500"){
+        PROJ500Course = courses[i];
+
+ console.log(PROJ500Course.Title);
+} 
+}
 
 
 // What are the titles of the courses that cost $50 or less?
-let cheapCourses = courses.filter(course => parseFloat(course.Fee) <= 50);
-let cheapCoursesTitles = cheapCourses.map(course => course.Title);
-console.log("Courses that cost $50 or less:", cheapCoursesTitles);
-
+console.log();
+console.log("courses under $50");
+let courseUnder50 = [];
+for (let i = 0; i < courses.length ; i++){
+    if(courses[i].Fee <= 50){
+        courseUnder50.push(courses[i]);
+    }
+}
 
 // What classes meet in "Classroom 1"?
-let classroom1Courses = courses.filter(course => course.Location === "Classroom 1");
-let classroom1CourseTitles = classroom1Courses.map(course => course.Title);
-console.log("Courses that meet in classroom 1:", classroom1CourseTitles);
