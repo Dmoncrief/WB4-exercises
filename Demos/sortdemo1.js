@@ -39,7 +39,7 @@ console.log(numbers);
 numbers.sort(compareAscendingNumber);
 
 
-functioncaseInsensitiveCompare(a, b){
+functioncaseInsensitiveCompare(a, b);{
     let aAsUpper = a.toUpperCase();
     let bAsUpper = b.toUpperCase();
     if ( aAsUpper < bAsUpper) { return -1;}
