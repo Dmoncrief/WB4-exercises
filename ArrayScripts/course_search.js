@@ -59,13 +59,14 @@ for (let i = 0; i < courses.length ; i++) {
 
 // What is the title of the PROJ500 course?
 let PROJ500Course;
-for (let i = 0; i < courses.length ; i++) {
-    if(courses[i].CourseId == "PROG500"){
-        PROJ500Course = courses[i];
-
- console.log(PROJ500Course.Title);
-} 
+for (let i = 0; i < courses.length; i++) {
+  if (courses[i].CourseId === "PROJ500") {
+    PROJ500Course = courses[i];
+    console.log("PROJ500 Title:", PROJ500Course.Title);
+    break; 
+  }
 }
+
 
 
 // What are the titles of the courses that cost $50 or less?
@@ -79,3 +80,11 @@ for (let i = 0; i < courses.length ; i++){
 }
 
 // What classes meet in "Classroom 1"?
+console.log("Courses in Classroom 1:");
+let coursesInClassroom1 = [];
+for (let i = 0; i < courses.length; i++) {
+  if (courses[i].Location === "Classroom 1") {
+    coursesInClassroom1.push(courses[i].Title);
+  }
+}
+console.log(coursesInClassroom1.join(", "));
